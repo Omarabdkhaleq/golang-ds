@@ -27,7 +27,7 @@ func (s stack) Push(i int) stack {
 	if s.IsFull() {
 		panic("stack is full")
 	}
-	s.stack[s.top] = i
+	s.stack = append(s.stack, i)
 	s.top++
 	return s
 }

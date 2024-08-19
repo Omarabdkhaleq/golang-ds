@@ -7,14 +7,12 @@ import (
 
 /* Queue => FIFO */
 
-type (
-	simpleQueue struct {
-		front int
-		rear  int
-		size  int
-		items []int
-	}
-)
+type simpleQueue struct {
+	front int
+	rear  int
+	size  int
+	items []int
+}
 
 func NewSimpleQueue(size int) simpleQueue {
 	return simpleQueue{
@@ -25,7 +23,7 @@ func NewSimpleQueue(size int) simpleQueue {
 	}
 }
 
-func (q simpleQueue) Enqueue(i int) []int {
+func (q *simpleQueue) Enqueue(i int) []int {
 	if q.IsFull() {
 		panic("queue is full")
 	}
@@ -34,11 +32,11 @@ func (q simpleQueue) Enqueue(i int) []int {
 	}
 	q.rear++
 	q.items = append(q.items, i)
-	fmt.Printf("inserted: %d\n", i)
+	fmt.Printf("Enqueued: %d\n", i)
 	return q.items
 }
 
-func (q simpleQueue) Dequeue() []int {
+func (q *simpleQueue) Dequeue() []int {
 
 	if q.IsEmpty() {
 		panic("queue is empty")
@@ -60,26 +58,26 @@ func (q simpleQueue) Dequeue() []int {
 	return q.items
 }
 
-func (q simpleQueue) IsEmpty() bool {
+func (q *simpleQueue) IsEmpty() bool {
 	if q.front == -1 {
 		return true
 	}
 	return false
 }
 
-func (q simpleQueue) IsFull() bool {
+func (q *simpleQueue) IsFull() bool {
 	if q.front == 0 && q.rear == q.size-1 {
 		return true
 	}
 	return false
 }
 
-func (q simpleQueue) Peek() int {
+func (q *simpleQueue) Peek() int {
 	return q.items[q.front]
 }
 
-func (q simpleQueue) Display() {
-	fmt.Println(q.items)
+func (q *simpleQueue) Display() {
+	fmt.Println(&q.items)
 }
 
 func SimpleQueueFromScratch() {

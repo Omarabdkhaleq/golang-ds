@@ -4,21 +4,12 @@ import "fmt"
 
 /* STACK => LIFO */
 
-type (
-	stack struct {
-		top   int
-		stack []int
-	}
-	Stack interface {
-		Push(int) stack
-		Pop() stack
-		IsEmpty() bool
-		IsFull() bool
-		Peek() int
-	}
-)
+type stack struct {
+	top   int
+	stack []int
+}
 
-func NewStack(size int) Stack {
+func NewStack(size int) stack {
 	return stack{
 		top:   -1,
 		stack: make([]int, 0, size),
@@ -64,15 +55,15 @@ func (s stack) Peek() int {
 	return s.stack[s.top]
 }
 
-func StackFromScratch() {
+func FromScratch() {
 	s := NewStack(4)
 	s = s.Push(1)
-	fmt.Println(s)
+	fmt.Println(&s.stack)
 	s = s.Push(2)
-	fmt.Println(s)
+	fmt.Println(&s.stack)
 	fmt.Println(s.Peek())
 	s = s.Pop()
-	fmt.Println(s)
+	fmt.Println(&s.stack)
 	s = s.Pop()
-	fmt.Println(s)
+	fmt.Println(&s)
 }

@@ -1,4 +1,6 @@
-package ds
+package stack
+
+import "fmt"
 
 /* STACK => LIFO */
 
@@ -60,4 +62,17 @@ func (s stack) IsFull() bool {
 
 func (s stack) Peek() int {
 	return s.stack[s.top]
+}
+
+func StackFromScratch() {
+	s := NewStack(4)
+	s = s.Push(1)
+	fmt.Println(s)
+	s = s.Push(2)
+	fmt.Println(s)
+	fmt.Println(s.Peek())
+	s = s.Pop()
+	fmt.Println(s)
+	s = s.Pop()
+	fmt.Println(s)
 }

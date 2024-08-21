@@ -60,15 +60,14 @@ func (l *SinglyLinkedList) traverse() {
 
 }
 
-// FIXME: solve last elem sorting
 func (l *SinglyLinkedList) sort() {
 	if l.head == nil {
 		return
 	}
 	current := l.head
-	for current.next != nil {
+	for current != nil {
 		index := current.next
-		for index.next != nil {
+		for index != nil {
 			if current.value > index.value {
 				tempValue := current.value
 				current.value = index.value

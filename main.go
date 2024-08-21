@@ -3,6 +3,10 @@ package main
 import "ds/ds/linkedlist"
 
 func main() {
+
+	linkedlist.SinglyLinkedListDemo()
+	linkedlist.DoublyLinkedListDemo()
+
 	//
 	//// Stack
 	//fmt.Println("Stacks")
@@ -24,5 +28,4 @@ func main() {
 	//fmt.Println("DQueue")
 	//queue.DQueueFromScratch()
 
-	linkedlist.SinglyLinkedListDemo()
 }

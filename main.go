@@ -1,11 +1,13 @@
 package main
 
-import "ds/ds/linkedlist"
+import "ds/hashtable"
 
 func main() {
 
-	linkedlist.SinglyLinkedListDemo()
-	linkedlist.DoublyLinkedListDemo()
+	hashtable.Demo()
+
+	//linkedlist.SinglyLinkedListDemo()
+	//linkedlist.DoublyLinkedListDemo()
 
 	//
 	//// Stack

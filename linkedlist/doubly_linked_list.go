@@ -3,7 +3,7 @@ package linkedlist
 import "fmt"
 
 type DNode struct {
-	value int
+	value interface{}
 	next  *DNode
 	prev  *DNode
 }
@@ -85,7 +85,7 @@ func (d *DoublyLinkedList) traverse() {
 	fmt.Println("Start of the list")
 	t := d.head
 	for t != nil {
-		fmt.Printf("node value %d,Next node Address %v, Prev node address %v\n", t.value, t.next, t.prev)
+		fmt.Printf("node Data %d,Next node Address %v, Prev node address %v\n", t.value, t.next, t.prev)
 		t = t.next
 	}
 	fmt.Println("End of the list")

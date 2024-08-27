@@ -99,8 +99,6 @@ func (ht *HashTable) display() {
 	}
 }
 
-// size
-
 func Demo() {
 	ht := new(5)
 

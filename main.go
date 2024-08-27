@@ -1,10 +1,10 @@
 package main
 
-import "ds/hashtable"
+import "ds/tree"
 
 func main() {
 
-	hashtable.Demo()
+	tree.BinaryTreeDemo()
 
 	//linkedlist.SinglyLinkedListDemo()
 	//linkedlist.DoublyLinkedListDemo()

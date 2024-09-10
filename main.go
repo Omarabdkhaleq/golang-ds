@@ -1,10 +1,12 @@
 package main
 
-import "ds/tree"
+import "ds/heap"
 
 func main() {
 
-	tree.BSTDemo()
+	heap.HeapDemo()
+
+	//tree.BSTDemo()
 
 	//tree.BinaryTreeDemo()
 

@@ -4,7 +4,9 @@ import "ds/tree"
 
 func main() {
 
-	tree.BinaryTreeDemo()
+	tree.BSTDemo()
+
+	//tree.BinaryTreeDemo()
 
 	//linkedlist.SinglyLinkedListDemo()
 	//linkedlist.DoublyLinkedListDemo()

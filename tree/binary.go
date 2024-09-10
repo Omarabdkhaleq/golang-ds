@@ -61,7 +61,7 @@ func (n *node) inorderTraversal() {
 		return
 	}
 	n.left.inorderTraversal()
-	fmt.Println("node", n.data)
+	fmt.Printf("data: %v\n", n.data)
 	n.right.inorderTraversal()
 }
 

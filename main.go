@@ -1,10 +1,12 @@
 package main
 
-import "ds/heap"
+import "ds/algo"
 
 func main() {
 
-	heap.HeapDemo()
+	algo.BubbleSortDemo()
+
+	//heap.HeapDemo()
 
 	//tree.BSTDemo()
 
